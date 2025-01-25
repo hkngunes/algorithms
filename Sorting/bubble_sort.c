@@ -47,7 +47,8 @@ void init_number_list(int number_list[], uint list_size)
 
 /**
  * Controls out of range situation for a list and index
- * @param list_size is the size of list that was considered to check index validity
+ * @param list_size is the size of list that was considered to check index 
+ * validity
  * @param index is the considered index whether it is valid or not
  * @return True if index is valid, False otherwise 
  */
@@ -65,13 +66,16 @@ bool check_list_index(uint list_size, uint index)
  * Swaps two values of a list by their index
  * @param number_list is the list thats two value want to be swapped
  * @param list_size is the size of number_list
- * @param index1 is the index of first number want to be swapped with second number
- * @param index2 is the index of second number want to be swapped with first number
+ * @param index1 is the index of first number want to be swapped with second 
+ * number
+ * @param index2 is the index of second number want to be swapped with first 
+ * number
  * @return True if the numbers swapped, False otherwise
  */
 bool swap(int number_list[], uint list_size, uint index1, uint index2)
 {
-    if(!check_list_index(list_size, index1) || !check_list_index(list_size, index2))
+    if( !check_list_index(list_size, index1) || 
+        !check_list_index(list_size, index2))
     {
         return false;
     }
@@ -101,13 +105,17 @@ void print_list(int number_list[], uint list_size)
 }
 
 /**
- * One iteration in bubble sort to determine value at index bubble_index when sorted
+ * One iteration in bubble sort to determine value at index bubble_index when 
+ * sorted
  * @param number_list is the list want to be sorted
  * @param list_size is the size of number_list
- * @param bubble_index is the index of number_list that's final value will be determined in this iteration
+ * @param bubble_index is the index of number_list that's final value will be 
+ * determined in this iteration
  * @return True if the value of bubble index is determined, False otherwise
  */
-bool bubble_sort_iteration(int number_list[], uint list_size, uint bubble_index)
+bool bubble_sort_iteration( int number_list[], 
+                            uint list_size, 
+                            uint bubble_index)
 {
     bool return_value = false;
 
